@@ -3,6 +3,11 @@ const qrcode = require('qrcode-terminal');
 
 // This would be the ID of the target group
 const GROUP_ID = "120363401780311617@g.us"; // Replace with your actual group ID
+// --- Safety Delay (IMPORTANT!) ---
+// Min and max delay in seconds between sending DMs to avoid getting banned
+const MIN_DELAY_S = 5;
+const MAX_DELAY_S = 15;
+// -------
 
 const client = new Client({
     authStrategy: new LocalAuth(),
