@@ -4,7 +4,7 @@ const fs = require('fs');
 const csv = require('csv-parser');
 
 // --- Configuration ---
-const GROUP_ID = "120363401780311617@g.us"; // Replace with your actual group ID
+const GROUP_ID = "120363421307176870@g.us"; // Replace with your actual group ID
 const CSV_FILE_PATH = 'contacts.csv';
 const COUNTRY_CODE = '91';
 
@@ -51,6 +51,7 @@ client.on('ready', async () => {
     console.log(`Fetching invite code for group: "${group.name}"`);
     const inviteCode = await group.getInviteCode();
     const inviteLink = `https://chat.whatsapp.com/${inviteCode}`;
+    console.log(`Invite link for group "${group.name}": ${inviteLink}`);
     const inviteMessage = `Hello! We can't add you to the group cuz of privacy settings. Please join the "${group.name}" group using this invite link:\n\n${inviteLink}`;
     console.log('Successfully fetched invite link.');
 

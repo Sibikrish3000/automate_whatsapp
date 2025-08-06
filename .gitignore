@@ -16,7 +16,7 @@ whatsapp-web.js/node_modules
 
 .wwebjs_auth
 .wwebjs_cache
-contacts.csv
+*.csv
 
 # Logs
 logs
